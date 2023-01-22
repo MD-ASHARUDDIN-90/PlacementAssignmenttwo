@@ -1,0 +1,12 @@
+.wrap{
+    padding: 1rem 2rem;
+}
+
+
+.card{
+    margin-top: 2rem;
+}
+.inputBtn{
+    display: flex;
+    margin-top: 1rem;
+}
