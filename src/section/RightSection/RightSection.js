@@ -7,9 +7,9 @@ export default function RightSection() {
     console.log(rightSecUserDetail,"I am from recoil")
     return(
         <>
-        <h1> Name : {rightSecUserDetail.Name}</h1>
+        <h1> Name : {rightSecUserDetail.Name}  {rightSecUserDetail.name}</h1>
 
-        <h1>ADDRESS: {rightSecUserDetail.Address}</h1>
+        <h1>ADDRESS: {rightSecUserDetail.Address} {rightSecUserDetail.address}</h1>
     
         </>
     )

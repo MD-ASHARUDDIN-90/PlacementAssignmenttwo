@@ -1,7 +1,9 @@
+import { atom } from "recoil";
 import ImageAvatars from '../atom/ImageAvatar/ImageAvatars'
 
-
-export const userList=[
+export const UserListData = atom({
+  key : "updatedListUser" ,
+  default : [
     {
         Img : <ImageAvatars />,
         Name : "Ashar Ahmad" ,
@@ -48,3 +50,5 @@ export const userList=[
         id : 5
     }
 ]
+})
+

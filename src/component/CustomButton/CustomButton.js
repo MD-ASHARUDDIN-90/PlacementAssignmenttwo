@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -6,7 +6,10 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import InputBox from "../../atom/Input/Input";
+// import { userList } from "../../UserDetailInformation/UserDetail";
 import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { UserListData } from "../../RecoilState/UserListData";
 
 export default function AlertDialog() {
   const [open, setOpen] = React.useState(false);
@@ -21,7 +24,14 @@ export default function AlertDialog() {
   const [city, setCity] = useState("");
   const [zip, setZip] = useState("");
   const [Proceed, setProceed] = useState(false);
+  const [ DataList , setDataList ]= useRecoilState(UserListData)
 
+ 
+  
+  
+
+  
+ 
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -54,7 +64,6 @@ export default function AlertDialog() {
       alert("Please enter correct Detail");
     } else {
        const customerDetails = {
-
         user,
         name,
         Lname,
@@ -65,11 +74,13 @@ export default function AlertDialog() {
         state,
         city,
         zip
-
-
        }
+       
+      
+       setDataList([...DataList,customerDetails])
 
        
+     
 
     }
   };
