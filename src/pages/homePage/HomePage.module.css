@@ -1,17 +1,31 @@
 @media screen  and (min-width : 1024px){
-    
+ *{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+ }
+    .container{
+        background-color: antiquewhite;
+    }
 .subContainer{
     display: flex;
-    
+    height: 92vh;
+    gap: 1rem;
+}
+.nav{
+    height: 8vh;
+    background-color: brown;
 }
 
 .leftSec{
     flex: 0.4;
-    border: 1px solid
+    border: 0px solid;
+    background-color: white;
 
 }
 .rightSec{
     flex: 1;
-    border: 1px solid red
+    border: 0px solid red;
+    background-color: antiquewhite;
 }
 }

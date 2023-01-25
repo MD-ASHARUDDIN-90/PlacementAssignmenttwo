@@ -7,7 +7,9 @@ export default function HomePage() {
   return (
     <>
       <div className={style.container}>
+      <div className={style.nav}>
         <Navbar />
+        </div>
         <div className={style.subContainer}>
           <div className={style.leftSec}>
             <LeftSection />
